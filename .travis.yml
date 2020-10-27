@@ -1,0 +1,11 @@
+sudo: required
+services:
+- docker
+language: bash
+script:
+# build image
+- docker build -t andrevs/rmapi .
+# push image
+- docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
+- docker tag andrevs/rmapi andrevs/rmapi:latest
+- docker push andrevs/rmapi:latest
