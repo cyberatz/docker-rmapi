@@ -19,12 +19,12 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Push to Docker Hub
-        uses: docker/build-push-action@v2
+      - name: Build and Push to Docker Hub
+        uses: docker/build-push-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PASS }}
-          #repository: andrevs/rmapi
+          repository: andrevs/rmapi
+          tags: latest
+          #tags: andrevs/rmapi:latest
           #push: true
-          #tags: latest
-          tags: andrevs/rmapi:latest
