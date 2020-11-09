@@ -2,7 +2,8 @@
 Docker container for rmapi
 
 ## Build status: 
-![Build Status](https://travis-ci.com/cyberatz/docker-rmapi.svg)
+![Travis Build Status](https://travis-ci.com/cyberatz/docker-rmapi.svg)
+![Build Status](https://github.com/cyberatz/docker-rmapi/workflows/Docker/badge.svg)
 
 ## Environment variables
 ```markdown
