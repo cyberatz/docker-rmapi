@@ -25,6 +25,6 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_PASS }}
           #repository: andrevs/rmapi
-          push: true
+          #push: true
           #tags: latest
           tags: andrevs/rmapi:latest
