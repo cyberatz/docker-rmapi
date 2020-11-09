@@ -51,14 +51,14 @@ jobs:
       - name: Build image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
       
-      - name: Push to Docker Hub
-        uses: docker/build-push-action@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USER }}
-          password: ${{ secrets.DOCKERHUB_PASS }}
-          repository: andrevs/$IMAGE_NAME
-          tags: andrevs/rmapi:latest
-          #tag_with_ref: true
+      #- name: Push to Docker Hub
+      #  uses: docker/build-push-action@v2
+      #  with:
+      #    username: ${{ secrets.DOCKERHUB_USER }}
+      #    password: ${{ secrets.DOCKERHUB_PASS }}
+      #    repository: andrevs/$IMAGE_NAME
+      #    tags: andrevs/rmapi:latest
+      #    #tag_with_ref: true
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
